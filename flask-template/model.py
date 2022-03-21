@@ -12,3 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
+from unittest import result
+
+
+def show_results(input_values):
+    # New York, California, Georgia, Washington, South Dakota 
+    score_key = {'New York': 'Albany', 'California': 'Sacramento','Georgia': 'Atlanta', 'Washington': 'Seatle','South Dakota': 'Pierre'}
+    result = {}
+    for state, capital in input_values:
+        if(score_key[state] != capital):
+            result[state] = f'{capital} is not the capital of {state}'
+        else:
+            result[state] = f'{capital} is not the capital of {state}'
