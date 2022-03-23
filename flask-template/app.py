@@ -45,4 +45,4 @@ def result():
         return render_template('result.html', results=show_results(input_values).items())
         
 
-
+app.run(host='0.0.0.0', port=8080)

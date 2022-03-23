@@ -20,7 +20,7 @@ def show_results(input_values):
     # New York, California, Georgia, Washington, South Dakota 
     score_key = {'New York': 'Albany', 'California': 'Sacramento','Georgia': 'Atlanta', 'Washington': 'Seatle','South Dakota': 'Pierre'}
     result = {}
-    for state, capital in input_values:
+    for state, capital in input_values.items():
         if(score_key[state] != capital):
             result[state] = f'{capital} is not the capital of {state}. ❌ '
         else:
