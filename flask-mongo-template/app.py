@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+#Partners: Traven Reese & Kevin R. Linera Hernandez
+
 # ---- YOUR APP STARTS HERE ----
 # -- Import section --
 from flask import Flask
