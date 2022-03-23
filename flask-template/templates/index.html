@@ -14,18 +14,23 @@
  limitations under the License.
 -->
 
+
+<!DOCTYPE html>
+<html lang="en">
+
 <html>
     <head>
         <title>Flask Template</title>
-        <link rel="stylesheet" href="../static/css/style.css">
+         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
-        <form method ="post" action="/results">
+        <form class="question" method ="post" action="/results">
+            <h1 id="title">What's the Capital?</h1>
             <input type="text" name="New York" placeholder="New York's Capital"/> 
             <input type="text" name="California" placeholder="California's Capital"/> 
             <input type="text" name="Georgia" placeholder="Georgia's Capital"/> 
             <input type="text" name="Washington" placeholder="Washington's Capital"/> 
-            <input type="text" name="South Dakota" placeholder="South Dakota's Capital"/> 
+            <input type="text" name="South Dakota" placeholder="South Dakota's Capital"/>
             <input type="submit" value="Submit"/>
         </form>
     </body>
