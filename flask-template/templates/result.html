@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+    <head>
+        <title>Flask Template</title>
+         <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <h1 id="title">What's the Capital?</h1>
+        {% for state, result in results %}
+            <li>{{ result }}</li>
+        {% endfor %}
+    </body>
+</html>
