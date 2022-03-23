@@ -22,6 +22,7 @@ def show_results(input_values):
     result = {}
     for state, capital in input_values:
         if(score_key[state] != capital):
-            result[state] = f'{capital} is not the capital of {state}'
+            result[state] = f'{capital} is not the capital of {state}. ❌ '
         else:
-            result[state] = f'{capital} is not the capital of {state}'
+            result[state] = f'{capital} is the capital of {state}. ✅'
+    return result

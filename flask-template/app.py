@@ -14,7 +14,8 @@
 
 # ---- YOUR APP STARTS HERE ----
 # -- Import section --
-from flask import Flask
+from flask import Flask, render_template, request
+from model import show_results
 # from flask import render_template
 # from flask import request
 
@@ -27,4 +28,21 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/index')
 def index():
-    return "hello world"
+    return render_template('index.html')
+
+
+@app.route('/results', methods = ['POST', 'GET'])
+def result():
+    if request.method== "GET":
+        return "You haven't finished the quiz"
+    else:
+        new_york = request.form['New York']
+        california = request.form['California']
+        georgia = request.form['Georgia']
+        washington = request.form['Washington']
+        south_dakota = request.form['South Dakota']
+        input_values = {'New York': new_york, 'California': california,'Georgia': georgia, 'Washington': washington,'South Dakota': south_dakota}
+        return render_template('result.html', results=show_results(input_values).items())
+        
+
+
